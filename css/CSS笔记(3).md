@@ -143,3 +143,71 @@
     * 两个值 左上/右下  右上左下
     * border-top-left-radius 设置左上角的圆角top可以替换为bottom
     * border-top-right-radius  设置右上角的圆角top可以替换为bottom
+
+##### 弹性盒子flex
+
+* 主要用来代替浮动来完成页面布局；可以是元素有弹性，让元素可以跟随页面的大小的改变而改变
+* 弹性容器
+  * 要使用弹性盒子，必须先将一个元素设置为弹性容器
+  * 可以通过display来设置弹性容器
+    * display：flex 设置为块级弹性容器
+    * display ：inline-flex  设置为行内的弹性容器
+  * flex-direction  指定容器中弹性元素的排列方式
+    * 可选值
+      * row 默认值，弹性元素在容器中水平排列(左向右)；  主轴自左向右
+      * row-reverse  弹性元素在容器中反向水平排列（右向左）；  主轴自右向左
+      * column 弹性元素纵向排列（自上向下）
+      * column-reverse 弹性元素方向纵向排列（自下向上）
+    * 主轴
+      * 弹性元素的排列方向成为主轴；由弹性容器设定的方向决定的
+    * 侧轴
+      * 与主轴垂直方向的成为侧轴
+  * flex-wrap  设置弹性元素是否在弹性容器中自动换行
+    * 可选值
+      * nowrap  默认值元素不会自动换行
+      * wrap 元素沿着辅轴（主轴的垂直方向自上而下的轴）方向自动换行
+      * wrap-reverse 元素沿辅轴反方向换行
+  * flex-flow  是wrap 和direction 的简写属性，没有顺序要求
+  * justify-content  如何分配主轴上的空白空间（主轴上的元素如何让排列）
+    * 可选值
+      * flex-start  元素沿着主轴起边排列
+      * flex-end  元素沿着主轴终边排列
+      * center 元素居中排列
+      * space-around 空白分布到元素两侧
+      * space-evenly 空白分布到元素单侧
+      * space-between空白均匀分不到元素间
+  * align-items  元素在辅轴上如何对齐
+    * 元素间的关系
+      * 可选值
+        * stretch 默认值将元素的长度设置为相同的值
+        * flex-start 元素不会拉伸，沿着辅轴对齐
+        * flex-end 沿着辅轴的终边对齐
+        * center 居中对齐
+  * align-content  辅轴上的空白空间分布
+    * 可选值
+      * flex-start  元素沿着辅轴起边排列
+      * flex-end  元素沿着辅轴终边排列
+      * center 元素居中排列
+      * space-around 空白分布到元素两侧
+      * space-evenly 空白分布到元素单侧
+      * space-between空白均匀分不到元素间
+  * align-self：用来覆盖当前弹性元素上的align-items
+* 弹性元素
+  * 弹性容器的子元素时弹性元素（弹性项）
+  * 一个元素可以同时是弹性容器和弹性元素
+  * flex-grow  指定弹性元素的伸展系数
+    * 当父元素由多余的空间时，子元素如何伸展，父元素的剩余空间会按照比例进行分配
+  * flex-shrink   指定弹性元素的收缩系数
+    * 当父元素中的空间不足以容纳所有的子元素时，对子元素进行收缩
+    * 缩减多少是根据  缩减系数 和  元素大小来计算的
+  * flex-basis   指定元素在主轴上的基础长度
+    * 若主轴是 横向的 则 该值指定的就是元素的宽度
+    * 若主轴是纵向的  则 该值指定的就是元素的高度
+    * 默认值是 auto 表示参考元素自身的高度或宽度
+    * 若传递一个具体的数值，则以该值为准
+  * flex  可以设置弹性元素的所有样式
+    * flex  增长  缩减  基础；
+      * initial  'flex  : 0 1  auto;'
+      * auto  'flex: 1 1 auto;'
+      * none  'flex: 0 0 auto'   弹性元素没有弹性
+  * order   决定弹性元素的排列顺序
