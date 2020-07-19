@@ -248,12 +248,12 @@
   * repeat-y  沿着y轴方向重复
   * no-repea  不重复
 * background-position  设置背景图片的位置
-  * top  left  right  center  来设置背景图片的位置
+  * top  left  right  center bottom 来设置背景图片的位置
     * 使用方位词时同时指定两个值，只写一个则另一个值默认为center
   * 偏移量来指定背景图片位置
     * 水平方向偏移量  垂直方向偏移量
   * 可以用来解决图片闪烁问题
-    * 可以将多个图片保存到一个大图片中，然后通过天正background-position来显示图片，这样图片同时加载到网页中，可以有效避免闪烁问题出现
+    * 可以将多个图片保存到一个大图片中，然后通过background-position来显示图片，这样图片同时加载到网页中，可以有效避免闪烁问题出现
     * 也被称为CSS-Sprite（雪碧图）
 * 雪碧图
   * 使用步骤
