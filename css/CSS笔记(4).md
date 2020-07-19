@@ -268,7 +268,7 @@
   * border-box  默认值，背景会出现在边框下边
   * padding-box  背景不会出现在边框，只出现在内容区和内边距
   * content-box 只出现在内容区
-* background-origin  背景图片的便宜量计算原点
+* background-origin  背景图片的偏移量计算原点
   * padding-box  默认值，图片位置从**内边距**处开始计算
   * content-box 背景图片的偏移量从**内容区**处计算
   * border-box 背景图片的变量从**边框**处开始计算
