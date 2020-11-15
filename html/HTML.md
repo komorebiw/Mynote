@@ -130,6 +130,16 @@
     - 提升到指定位置，在链接中设置#id的值。
   - html中有一个属性，每一个元素都可以设置，该设置可以作为标签的唯一标识，这个属性就是id，id属性在一个页面中不能重复
   - 发送电子邮件的超链接点击以后可以自动打开计算机中小型的邮件客户端href =“ mailto：邮件地址”，当单击此链接时会打开打开计算机的串行邮件客户端，并且讲接收设置mailto后的邮件地址
+#####滚动字幕
+
+* 属性
+  - direction 方向  取值 up  down left  right
+  - behavior  方式 取值  scroll  循环滚动  slide  滚动一次   alternate  来回交替滚动
+  - scrollmount 滚动速度 以像素为单位
+  - scrolldelay  滚动文字延迟时间  以毫秒为单位
+  - loop 滚动循环次数  以次数为单位
+  - width height 滚动范围
+  - bgcolor  滚动背景颜色属性
 
 ##### 表格
 
